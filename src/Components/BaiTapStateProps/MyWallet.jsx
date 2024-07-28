@@ -57,7 +57,7 @@ const MyWallet = () => {
                         return (
                             <li key={index} className='list-group-item d-flex justify-content-between'>
                                 <span>{transactions.type === 'deposit' ? 'Deposited' : 'Withdrew'}</span>
-                                <span>{transactions.amount.toFixed(2)}</span>
+                                <span>${transactions.amount.toFixed(2)}</span>
                                 <span>{transactions.date.toLocaleString()}</span>
                             </li>
                         );
