@@ -16,7 +16,7 @@ const MyWallet = () => {
     // Hàm xử lý giao dịch
     const handleTransaction = (amount, type) => {
         if(type === 'withdraw' && amount > balance) {
-            setErrorMessage('Số tiền rút không đủ với số dư')
+            setErrorMessage('Số tiền rút không đủ với số dư !')
             return;
         }
         // Tính toán số dư mới dựa trên loại giao dịch.
@@ -55,7 +55,7 @@ const MyWallet = () => {
                 <ul className='list-group'>
                     {transactions.map((transactions, index) => {
                         return (
-                            <li key={index} className='list-group-item d-flex justify-content-between'>
+                            <li key={index} className={`list-group-item ${transactions.type === 'deposit' ? 'deposit-item' : 'withdraw-item'} d-flex justify-content-between`}>
                                 <span>{transactions.type === 'deposit' ? 'Deposited' : 'Withdrew'}</span>
                                 <span>${transactions.amount.toFixed(2)}</span>
                                 <span>{transactions.date.toLocaleString()}</span>

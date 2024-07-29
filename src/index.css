@@ -85,17 +85,22 @@ button:focus-visible {
   /* padding: 20px; */
   text-align: center;
 }
-.card p{
+.card p {
   /* font-size: 2rem; */
   color: #f1f104;
 }
 .card h2 {
   margin-bottom: 30px;
 }
-.list-group-item:nth-child(odd) {
+
+.deposit-item {
   background-color: #d1e7dd;
 }
 
-.list-group-item:nth-child(even) {
+.withdraw-item {
   background-color: #f8d7da;
+}
+
+.list-group-item {
+  color: #000;
 }
